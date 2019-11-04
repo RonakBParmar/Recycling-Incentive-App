@@ -4,9 +4,13 @@ Hackathon project that tries to solve the recycling rate issues by providing inc
 Machine Learning code and weights dataset from https://github.com/maartensukel/ 
 
 Group Members
+
 -Ronak Parmar
 
 -Ahmed Ellisy
+
 -Albari Islam
+
 -Muhammad Hammad
+
 -Bari Islam
