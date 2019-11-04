@@ -3,8 +3,11 @@ Hackathon project that tries to solve the recycling rate issues by providing inc
 
 Machine Learning code and weights dataset from https://github.com/maartensukel/ 
 Raspberry Pi GPIO code by RonakBParmar
+
 Hardware Design by RonakBParmar
+
 Software and UX Design Ahmed Ellisy
+
 
 Group Members
 
