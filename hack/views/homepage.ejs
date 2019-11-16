@@ -1,0 +1,136 @@
+<header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+</header>
+<video id="myVideo" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <source src="/video/video3.mp4" type="video/mp4">
+</video>
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-1">
+      <% if (success_msg != '' || error != '') { %>
+      <div><% include ./partials/messages %></div>
+      <% } %>
+
+      <h3>Login <i class="fas fa-recycle fa-1.5x" style=" color: #0062cc;"></i></h3>
+
+      <form action="/users/login" method="post">
+        <div class="form-group">
+          <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group" style="text-align: center;">
+          <input type="submit" class="btnSubmit" value="Login" />
+        </div>
+
+
+      </form>
+    </div>
+    <div class="col-md-6 login-form-2">
+      <% if (error_msg == 'Email Already Exists' || error_msg == 'Password Must be more than 3 characters' || error_msg == 'Please Enter All Fields'  ) { %>
+      <div><% include ./partials/messages %></div>
+      <% } %>
+      <h3>Registration <i class="far fa-trash-alt" style=" color: #0062cc;"></i></h3>
+      <form action="/users/register" method="post">
+        <div class="form-group">
+          <input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="text" name="address" id="address" tabindex="2" class="form-control" placeholder="Address">
+        </div>
+        <div class="form-group" style="text-align: center;">
+          <input type="submit" class="btnSubmit" value="Register" />
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+
+
+
+
+
+
+<style>
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .login-form-1 {
+    padding: 2%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+  }
+
+  .login-form-1 h3 {
+    text-align: center;
+    color: black;
+    margin-top: 11%;
+  }
+
+  .login-form-2 {
+    padding: 2%;
+    background: #fff;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .login-form-2 h3 {
+    text-align: center;
+    color: #333;
+  }
+
+  .login-container form {
+    padding: 4%;
+  }
+
+  .btnSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+  }
+
+  .login-form-1 .btnSubmit {
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+  }
+
+  .login-form-2 .btnSubmit {
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+  }
+</style>
