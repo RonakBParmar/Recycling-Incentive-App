@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "connect-flash": "^0.1.1",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
